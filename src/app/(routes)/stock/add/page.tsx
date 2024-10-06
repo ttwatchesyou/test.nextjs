@@ -4,14 +4,14 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { useAppDispatch } from "@/app/store/store";
+import { useAppDispatch } from "@/src/app/store/store";
 import { useForm, Controller } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ProductData } from "@/src/models/product.model";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { addProduct } from "@/app/store/slices/productSlice";
+import { addProduct } from "@/src/app/store/slices/productSlice";
 
 const formValidateSchema = Yup.object().shape({
   name: Yup.string().required("Name is required Please Insert Name").trim(),
